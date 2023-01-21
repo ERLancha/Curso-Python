@@ -1,7 +1,7 @@
 import pandas as pd
 
 #Cargamos los datos desde un csv
-df = pd.read_csv('../Datos/survey-2022/data.csv', index_col='Respondent')
+df = pd.read_csv('../Datos/survey-2022/data.csv',index_col='ResponseId')
 schema_df = pd.read_csv('../Datos/survey-2022/data_schema.csv')
 
 # mostramos los primeros registros
@@ -25,7 +25,7 @@ schema_df = pd.read_csv('../Datos/survey-2022/data_schema.csv')
 #print (df.shape)
 
 # recuperamos la lista de columnas
-print (df.columns)
+#print (df.columns)
 
 # recuperamos una columna completa
 #print(df['Employment'])
@@ -36,5 +36,5 @@ print (df.columns)
 # contamos los distintos valores de una columna
 #print(df['EdLevel'].value_counts())
 
-print(df.loc[[0,1,2],'Employment'])
+print(df.loc[[1,2],'Employment'])
 print(df.loc[0:2,'Employment':'YearsCode'])
