@@ -10,9 +10,24 @@ people={
 
 df = pd.DataFrame(people)
 
-#elimina todas las filas con nan
+#elimina todas las filas con nan or none
 df.dropna()
 
+#parámetros por defecto
+#axis= [index, column], how=[all,any]
+#df.dropna(axis='index',how='any')
+#inplace=True
 
+#eliminamos todas las filas que no tengan valores correctos en last y email
+df.dropna(axis='index',how='all',subset=['last','email'])
 
-print (df)
+#Cambia un valor de error personalizdo por los nan o none
+df.replace('NA',np.nan,inplace=True)
+df.replace('Missing',np.nan,inplace=True)
+
+df.dropna(axis='index',how='all',subset=['last','email'])
+
+#cambia todos los na por 0
+df.fillna(0)
+
+print (df.isna())
