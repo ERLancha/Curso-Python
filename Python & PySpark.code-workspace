@@ -4,9 +4,6 @@
 			"path": "."
 		},
 		{
-			"path": "../Apache Spark/Ejemplos Libro"
-		},
-		{
 			"path": "../Apache Spark/Ejemplos Libro PySpark"
 		}
 	],
